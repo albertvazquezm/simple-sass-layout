@@ -1,0 +1,44 @@
+header {
+    background: $gray-dark;
+    height: $main-header-height;
+    .logo-wrapper {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        .logo {
+            width: 41px;
+            height: 41px;
+        }
+    } 
+    .client-info {
+        height: $main-header-height;
+        text-align: center;
+        padding-top: 12px;
+        .client-name {
+            line-height: 16px;
+            color: #fff;
+            display: block;
+        }
+    }
+}
+
+nav.main-nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                height: $main-header-height;
+                padding: 19px 20px 0 20px;
+                color: #fff;
+                text-transform: uppercase;
+                &:hover {
+                    background: $gray-darker;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
