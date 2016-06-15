@@ -1,10 +1,18 @@
 $font-path: '../fonts/';
 
+@import '_partials/bootstrap-config';
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+
+
 @import '_partials/vars';
 @import '_partials/header';
+@import '_partials/layout';
+@import '_partials/card';
+@import '_partials/table';
 
 @font-face {
   font-family: 'LabGrotesque';
@@ -15,6 +23,17 @@ $font-path: '../fonts/';
        url(#{$font-path}LabGrotesqueWeb-Regular.ttf)  format('truetype'), /* Safari, Android, iOS */
 }
 
+@font-face {
+  font-family: 'LabGrotesque';
+  src: url(#{$font-path}LabGrotesqueWeb-Light.eot); /* IE9 Compat Modes */
+  src: url(#{$font-path}LabGrotesqueWeb-Light.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(#{$font-path}LabGrotesqueWeb-Light.woff2) format('woff2'), /* Super Modern Browsers */
+       url(#{$font-path}LabGrotesqueWeb-Light.woff) format('woff'), /* Pretty Modern Browsers */
+       url(#{$font-path}LabGrotesqueWeb-Light.ttf)  format('truetype'); /* Safari, Android, iOS */
+  font-weight: light;
+}
+
 body {
     font-family: 'LabGrotesque', sans-serif;
+    background: #eee;
 }

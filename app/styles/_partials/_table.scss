@@ -1,0 +1,12 @@
+.table {
+    th {
+        background: $semi-soft-gray;
+    }
+    tbody > tr > td {
+        border: 0;
+        background: #fff;
+    }
+    tbody > tr:nth-child(even) > td {
+        background: #fcfcfc;
+    } 
+}

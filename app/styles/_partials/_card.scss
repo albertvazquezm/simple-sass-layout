@@ -1,0 +1,34 @@
+$base-card-padding: 20px;
+.base-card {
+    -webkit-box-shadow: 1px 1px 0px 0px #ccc;
+    -moz-box-shadow: 1px 1px 0px 0px #ccc;
+    box-shadow: 1px 1px 0px 0px #ccc;
+    .card-title {
+        background: $semi-soft-gray;
+        padding: 7px $base-card-padding;
+        display: block;
+        width: 100%;
+    }
+    .card-content {
+        padding: $base-card-padding;
+        background: #fff;
+        .content-block {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.card-kpi-status {
+    text-align: center;
+    .card-kpi-main-value {
+        display: block;
+        font-size: 26px;
+    }
+    .card-kpi-standard-value {
+        display: block;
+        font-size: 20px;
+    }
+}
