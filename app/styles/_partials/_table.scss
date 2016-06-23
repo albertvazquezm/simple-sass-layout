@@ -1,10 +1,28 @@
 .table {
     th {
         background: $semi-soft-gray;
+        position: relative;
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: #ccc transparent transparent transparent;
+            position: absolute;
+            right: 16px;
+            top: 12px;
+        }
+        &.filtering {
+            &:after {
+                border-color: #333 transparent transparent transparent;
+            }
+        }
     }
     tbody > tr > td {
         border: 0;
         background: #fff;
+        border-right: 1px #eee solid;
     }
     tbody > tr:nth-child(even) > td {
         background: #fcfcfc;

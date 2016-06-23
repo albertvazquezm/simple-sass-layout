@@ -30,7 +30,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                     <nav class="main-nav">
                         <ul>
                             <li><a href="#">Predict</a></li>
@@ -39,7 +39,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="client-info">
                         <span class="client-name">Client name</span>
                         <a href="#">Account settings</a>
@@ -96,33 +96,76 @@
         <div class="container">
             <h2 class="section-title">Campaigns</h2>
             <button class="btn btn-primary">Create new</button>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Campaign name</th>
-                        <th>Status</th>
-                        <th>Marketing goal</th>
-                        <th>Tags</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Campaign 22</td>
-                        <td>Prediction</td>
-                        <td>Raise awareness</td>
-                        <td>Brand: BW7</td>
-                        <td>01/06/2016 - 04/06/2016</td>
-                    </tr>
-                    <tr>
-                        <td>Campaign 22</td>
-                        <td>Prediction</td>
-                        <td>Raise awareness</td>
-                        <td>Brand: BW7</td>
-                        <td>01/06/2016 - 04/06/2016</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="pull-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary">List</button>
+                  <button type="button" class="btn btn-primary active">Timeline</button>
+                </div>
+            </div>
+            <div class="padded-content">
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Campaign name</th>
+                          <th>Status</th>
+                          <th>Marketing goal</th>
+                          <th>Tags</th>
+                          <th class="filtering">Date</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-success"></div>Running</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-success"></div>Running</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-warning"></div>Running</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-warning"></div>Running</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-danger"></div>Error</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-info"></div>Finished</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                      <tr>
+                          <td>Campaign 22</td>
+                          <td><div class="status-bullet status-bullet-info"></div>Finished</td>
+                          <td>Raise awareness</td>
+                          <td>Brand: BW7</td>
+                          <td>01/06/2016 - 04/06/2016</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
         </div>
     </section>
 
@@ -131,82 +174,72 @@
         <div class="container">
             <h2 class="section-title">Creative materials</h2>
             <button class="btn btn-primary">Upload new</button>
-            <ul class="inline-checkboxes">
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    All
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    TV
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    Radio
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    Print
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    Outdoor
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="checkbox" />
-                    Online
-                  </label>
-                </li>
-            </ul>
-            <div class="row">
-              <div class="col-md-2">
-                <div class="base-card">
-                  <div class="card-image" style="background-image: url('images/Material 1.png')">
-                  </div>
-                  <div class="card-content text-center">
-                    <strong class="title">The Truth</strong>
-                    <a href="#">Print</a>
+            <div class="padded-content">
+              <ul class="inline-checkboxes">
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-all" checked="checked" />
+                    <label for="materials-checkbox-all">All</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-tv" />
+                    <label for="materials-checkbox-tv">TV</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-radio" />
+                    <label for="materials-checkbox-radio">Radio</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-print" />
+                    <label for="materials-checkbox-print">Print</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-outdoor" />
+                    <label for="materials-checkbox-outdoor">Outdoor</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="materials-checkbox-online" />
+                    <label for="materials-checkbox-online">Online</label>
+                  </li>
+              </ul>
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="base-card">
+                    <div class="card-image" style="background-image: url('images/Material 1.png')">
+                    </div>
+                    <div class="card-content text-center">
+                      <strong class="title">The Truth</strong>
+                      <a href="#">Print</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <div class="base-card">
-                  <div class="card-image" style="background-image: url('images/Material 2.png')">
-                  </div>
-                  <div class="card-content text-center">
-                    <strong class="title">The Truth</strong>
-                    <a href="#">Print</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="base-card">
-                  <div class="card-image" style="background-image: url('images/Material 3.png')">
-                  </div>
-                  <div class="card-content text-center">
-                    <strong class="title">The Truth</strong>
-                    <a href="#">Print</a>
+                <div class="col-md-2">
+                  <div class="base-card">
+                    <div class="card-image" style="background-image: url('images/Material 2.png')">
+                    </div>
+                    <div class="card-content text-center">
+                      <strong class="title">The Truth</strong>
+                      <a href="#">Print</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <div class="base-card">
-                  <div class="card-image" style="background-image: url('images/Material 4.png')">
+                <div class="col-md-2">
+                  <div class="base-card">
+                    <div class="card-image" style="background-image: url('images/Material 3.png')">
+                    </div>
+                    <div class="card-content text-center">
+                      <strong class="title">The Truth</strong>
+                      <a href="#">Print</a>
+                    </div>
                   </div>
-                  <div class="card-content text-center">
-                    <strong class="title">The Truth</strong>
-                    <a href="#">Print</a>
+                </div>
+                <div class="col-md-2">
+                  <div class="base-card">
+                    <div class="card-image" style="background-image: url('images/Material 4.png')">
+                    </div>
+                    <div class="card-content text-center">
+                      <strong class="title">The Truth</strong>
+                      <a href="#">Print</a>
+                    </div>
                   </div>
                 </div>
               </div>

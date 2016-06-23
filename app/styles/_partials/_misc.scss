@@ -30,3 +30,28 @@
     }
   }
 }
+
+/*
+  STATUS BULLET
+*/
+
+.status-bullet {
+  width: 10px;
+  height: 10px;
+  float: left;
+  margin-top: 5px;
+  margin-right: 15px;
+  border-radius: 50%;
+  &.status-bullet-warning {
+    background: $brand-warning;
+  }
+  &.status-bullet-danger {
+    background: $brand-danger;
+  }
+  &.status-bullet-info {
+    background: $brand-info;
+  }
+  &.status-bullet-success {
+    background: $brand-success;
+  }
+}
